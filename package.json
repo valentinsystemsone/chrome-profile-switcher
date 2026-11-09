@@ -1,0 +1,18 @@
+{
+  "name": "chrome-profile-switcher",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Arc-style one-click switching between Google Chrome profiles.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "rm -rf dist && cp -R public dist && esbuild src/background.ts src/content.ts src/popup.ts --bundle --format=iife --target=chrome120 --loader:.css=text --outdir=dist",
+    "watch": "npm run build -- --watch",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.3.7",
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2"
+  }
+}

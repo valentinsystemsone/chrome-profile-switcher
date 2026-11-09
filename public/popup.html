@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>Switch profile</h1>
+  </header>
+
+  <div id="error" class="error" role="alert" hidden></div>
+
+  <ul id="list" class="list" aria-label="Chrome profiles">
+    <li class="skeleton"></li><li class="skeleton"></li><li class="skeleton"></li>
+  </ul>
+
+  <section class="settings">
+    <label class="setting">
+      <span class="text">
+        <span class="headline">Profile bar on pages</span>
+        <span class="supporting">Toggle with ⌥⇧P</span>
+      </span>
+      <input id="dock" type="checkbox" role="switch" class="switch">
+    </label>
+    <label class="setting">
+      <span class="text">
+        <span class="headline">This profile is</span>
+        <span class="supporting">Set it if you're not signed in</span>
+      </span>
+      <select id="self" class="select"><option value="">Unknown</option></select>
+    </label>
+  </section>
+
+  <script src="popup.js"></script>
+</body>
+</html>
